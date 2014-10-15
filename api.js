@@ -47,7 +47,7 @@ router.route('/passes/serial/:serial_number')
        res.json({
        		balance : "my pass balance",
        		passTypeId : "my passTypeId",
-       		serialNUmber : "my serialNumber"
+       		serialNumber : "my serialNumber"
        });
     });
 
