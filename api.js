@@ -28,6 +28,29 @@ router.get('/', function(req, res) {
 
 // more routes for our API will happen here
 
+// on routes that end in /passes/:email_address
+router.route('/passes/email/:email_address')
+
+    // get passes associated with this email_address
+    .get(function(req, res){
+        res.json({
+        	serialNumber : "pass serialNumber",
+        	passTypeId : "pass passTypeId"
+        });
+    });
+
+// on routes that end in /passes/:serial_number
+router.route('/passes/serial/:serial_number')
+
+    // get passes associated with this serial_number
+    .get(function(req, res){
+       res.json({
+       		balance : "my pass balance",
+       		passTypeId : "my passTypeId",
+       		serialNUmber : "my serialNumber"
+       });
+    });
+
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
