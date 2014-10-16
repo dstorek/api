@@ -34,8 +34,12 @@ router.route('/passes/email/:email_address')
     // get passes associated with this email_address
     .get(function(req, res){
         res.json({
-        	serialNumber : "pass serialNumber",
-        	passTypeId : "pass passTypeId"
+		pass:	[
+					{ serialNumber : "pass serialNumber1", passTypeId : "pass passTypeId1" },
+					{ serialNumber : "pass serialNumber2", passTypeId : "pass passTypeId2" },
+					{ serialNumber : "pass serialNumber3", passTypeId : "pass passTypeId3" }
+				]
+
         });
     });
 
